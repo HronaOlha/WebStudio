@@ -1,0 +1,7 @@
+@mixin calc($value) {
+  width: calc((100% - 30px * ($value - 1)) / $value);
+}
+
+@mixin transition($property) {
+  transition: $property $primary-transition-time $primary-cubic-function;
+}

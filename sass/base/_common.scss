@@ -1,0 +1,55 @@
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}
+
+body {
+  font-family: $main-font;
+  font-size: 14px;
+  color: $main-text-color;
+  background-color: $main-color-light;
+}
+
+.section {
+  // padding: 94px 0;
+  padding: 60px 0;
+  margin: 0 auto;
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    padding: 94px 0;
+  }
+}
+
+.title {
+  font-size: 28px;
+  line-height: 1.66;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $second-color-dark;
+  padding-bottom: 50px;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+  }
+}

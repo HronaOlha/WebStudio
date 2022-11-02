@@ -1,0 +1,16 @@
+.logo__accent {
+  color: $accent-color;
+}
+
+.header__logo {
+  @extend %logo;
+  margin-right: 93px;
+  padding: 24px 0 25px;
+}
+
+.footer__logo {
+  @extend %logo;
+  display: inline-block;
+  color: $main-color-light;
+  margin-bottom: 20px;
+}
