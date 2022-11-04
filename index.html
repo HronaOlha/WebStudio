@@ -396,7 +396,7 @@
     <!-- FOOTER -->
     <footer class="footer">
       <div class="footer__container container">
-        <div class="footer__wrap">
+        <div class="footer__wrap footer__container-item">
           <a class="logo footer__logo link" href="/"
             ><span class="logo__accent">Web</span>Studio</a
           >
@@ -426,7 +426,7 @@
             </ul>
           </address>
         </div>
-        <div class="footer-socials">
+        <div class="footer-socials footer__container-item">
           <h3 class="footer__title">Приєднуйтесь</h3>
           <ul class="footer-socials__list list">
             <li class="footer-socials__item">
@@ -459,17 +459,19 @@
             </li>
           </ul>
         </div>
-        <form class="footer-mail">
+        <form class="footer-mail footer__container-item">
           <h3 class="footer__title">Підпишіться на розсилку</h3>
-          <input
-            class="footer-mail__input"
-            type="email"
-            name="mail"
-            placeholder="E-mail"
-          />
-          <button class="footer-mail__btn btn" type="submit">
-            Підписатися
-          </button>
+          <div class="footer-mail__wrap">
+            <input
+              class="footer-mail__input"
+              type="email"
+              name="mail"
+              placeholder="E-mail"
+            />
+            <button class="footer-mail__btn btn" type="submit">
+              Підписатися
+            </button>
+          </div>
         </form>
       </div>
     </footer>

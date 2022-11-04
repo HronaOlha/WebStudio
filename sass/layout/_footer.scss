@@ -1,13 +1,29 @@
 .footer {
-  background-color: $accent-bgc;
   padding: 60px 0;
+
+  background-color: $accent-bgc;
 }
 
 .footer__container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  // align-items: baseline;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.footer__container-item {
+  @media screen and (max-width: $tablet-width) {
+    width: 100%;
+  }
+  @media screen and (min-width: $tablet-width) {
+    @include calc(2);
+  }
+  @media screen and (min-width: $desktop-width) {
+    justify-content: space-between;
+  }
+  @media screen and (min-width: $desktop-width) {
+    flex-wrap: nowrap;
+    align-items: baseline;
+  }
 }
 
 // ----------------------------------------------
@@ -16,7 +32,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 60px;
+
+  margin: 0 0 60px 0;
+
+  @media screen and (min-width: $desktop-width) {
+    align-items: flex-start;
+    margin: 0;
+    width: 231px;
+  }
 }
 
 .footer__address {
@@ -25,6 +48,15 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #ffffff;
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $desktop-width) {
+    align-items: flex-start;
+  }
 }
 
 .footer__list .link:hover,
@@ -51,25 +83,30 @@
 // ----------------------------------------------
 
 .footer-socials {
-  // display: block;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  width: 206px;
-  // margin-left: 70px;
-  margin-bottom: 60px;
+  margin: 0 0 60px 0;
+
+  @media screen and (min-width: $desktop-width) {
+    width: 206px;
+    margin: 0 0 0 70px;
+    align-items: flex-start;
+  }
 }
 
 .footer__title {
+  margin-bottom: 20px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
-  margin-bottom: 20px;
 }
+
 .footer-socials__list {
   display: flex;
   gap: 10px;
@@ -77,13 +114,16 @@
 }
 
 .footer-socials__link {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+
   fill: #ffffff;
   transition: color $primary-transition-time $primary-cubic-function,
     background-color $primary-transition-time $primary-cubic-function;
@@ -106,9 +146,30 @@
   flex-direction: column;
   align-items: center;
 
-  width: 100%;
+  margin: 0 auto;
 
-  // margin-left: auto;
+  @media screen and (max-width: $tablet-width) {
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    align-items: flex-start;
+    margin: 0 0 0 auto;
+  }
+}
+
+.footer-mail__wrap {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (max-width: $desktop-width) {
+    width: 100%;
+  }
+  @media screen and (min-width: $desktop-width) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 }
 
 .footer-mail__input {
@@ -124,18 +185,22 @@
 
   background-color: transparent;
   color: $main-color-light;
+
+  @media screen and (min-width: $mobile-width) {
+    width: 450px;
+  }
+  @media screen and (min-width: $desktop-width) {
+    width: 358px;
+  }
 }
 
 .footer-mail__btn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
+
   margin-left: 12px;
-
-  min-width: 200px;
-  height: 50px;
-
-  /* padding: 10px 28px; */
+  padding: 10px 28px;
 
   &::after {
     content: "";
