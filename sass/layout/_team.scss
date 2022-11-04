@@ -61,8 +61,8 @@
   fill: #afb1b8;
   // transition: color $primary-transition-time $primary-cubic-function,
   //   background-color $primary-transition-time $primary-cubic-function;
-  @include transition(color);
-  @include transition(background-color);
+
+  @include transition(fill, background-color);
 
   &:hover,
   &:focus {
