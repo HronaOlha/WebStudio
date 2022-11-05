@@ -1,9 +1,25 @@
-
 .btn-list {
   display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+
+  justify-content: left;
+  // gap: 8px;
+  // margin-bottom: 50px;
+
+  margin-bottom: 40px;
+  row-gap: 15px;
+  column-gap: 8px;
+
+  @media screen and (min-width: $tablet-width) {
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    margin-bottom: 50px;
+  }
 }
 
 .btn-current {
@@ -20,11 +36,19 @@
 }
 
 .portfolio-examples__item {
-  width: calc((100% - 60px) / 3);
+  // width: calc((100% - 60px) / 3);
+  width: 100%;
 
   border: 1px solid #eeeeee;
 
   transition: box-shadow $primary-transition-time $primary-cubic-function;
+
+  @media screen and (min-width: 768px) {
+    @include calc(2);
+  }
+  @media screen and (min-width: 1200px) {
+    @include calc(3);
+  }
 
   &:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
