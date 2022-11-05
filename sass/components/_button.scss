@@ -47,3 +47,13 @@
     color: $main-color-light;
   }
 }
+
+.menu-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+
+  @media screen and (min-width: $tablet-width) {
+    display: none;
+  }
+}
