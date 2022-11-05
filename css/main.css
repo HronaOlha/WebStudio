@@ -179,23 +179,20 @@ body {
 }
 
 .modal {
-  overflow: hidden;
   position: absolute;
-  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  top: 50%;
   width: calc(100% - 30px);
   height: 85%;
+  max-height: 609px;
   padding: 40px;
-  overflow: scroll;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  overflow-y: scroll;
   background-color: #ffffff;
+  transform: translate(-50%, -50%);
 }
 @media screen and (min-width: 480px) {
   .modal {
     width: 450px;
-    height: 609px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -204,8 +201,7 @@ body {
     height: 581px;
   }
 }
-
-.modal__button {
+.modal .modal__button {
   position: absolute;
   display: flex;
   align-items: center;
@@ -220,80 +216,72 @@ body {
   cursor: pointer;
   background-color: transparent;
 }
-.modal__button:hover {
+.modal .modal__button:hover {
   fill: #2196f3;
 }
-
-.modal__title {
+.modal .modal__title {
   display: block;
   margin-bottom: 12px;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
 }
 @media screen and (min-width: 480px) {
-  .modal__title {
+  .modal .modal__title {
     font-size: 20px;
   }
 }
-
-.modal__field {
+@media screen and (min-width: 1200px) {
+  .modal .modal__title {
+    line-height: 1.15;
+  }
+}
+.modal .modal__field {
   margin-bottom: 10px;
 }
-
-.modal__label {
+.modal .modal__label {
   display: block;
   margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.16;
 }
-
-.input__wrap {
+.modal .modal__input-wrap {
   position: relative;
 }
-
-.modal__input {
+.modal .modal__input {
   width: 100%;
   height: 40px;
   padding: 0 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
-.modal__input:focus {
+.modal .modal__input:focus {
   outline-color: #2196f3;
   transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.modal__input:focus ~ .modal__icon {
+.modal .modal__input:focus ~ .modal__icon {
   fill: #2196f3;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.modal__icon {
+.modal .modal__icon {
   position: absolute;
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
 }
-
-.modal__comments {
+.modal .modal__comments {
   resize: none;
   margin-bottom: 20px;
   padding: 12px 16px;
   width: 100%;
-  height: 85px;
+  height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
-@media screen and (min-width: 480px) {
-  .modal__comments {
-    height: 120px;
-  }
-}
-.modal__comments::-moz-placeholder {
+.modal .modal__comments::-moz-placeholder {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -301,7 +289,7 @@ body {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-.modal__comments:-ms-input-placeholder {
+.modal .modal__comments:-ms-input-placeholder {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -309,7 +297,7 @@ body {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-.modal__comments::placeholder {
+.modal .modal__comments::placeholder {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -317,27 +305,27 @@ body {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-
-.modal__contact-wrap {
+.modal .modal__contact-wrap {
   margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .modal .modal__contact-wrap {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .modal__contract-label {
   display: flex;
   align-items: center;
-  font-size: 12px;
-}
-@media screen and (min-width: 1200px) {
-  .modal__contract-label {
-    font-size: inherit;
-  }
 }
 
 .modal__link {
   color: #2196f3;
+  margin-left: 5px;
 }
 
-.contract__icon-wrap {
+.modal__contract-span {
   display: inline-block;
   margin: 0 8px 0 12px;
   width: 16px;
@@ -345,7 +333,7 @@ body {
   border: 2px solid #212121;
   border-radius: 2px;
 }
-.contract__icon-wrap:hover {
+.modal__contract-span:hover {
   border-color: #2196f3;
 }
 
@@ -353,7 +341,7 @@ body {
   fill: transparent;
 }
 
-.modal__contract:checked + .modal__contract-label > .contract__icon-wrap {
+.modal__contract:checked + .modal__contract-label > .modal__contract-span {
   background-color: #2196f3;
   border: none;
 }
