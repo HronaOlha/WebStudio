@@ -5,3 +5,12 @@
   line-height: 1.19;
   letter-spacing: 0.03em;
 }
+
+%hover-link {
+    @include transition(color, null);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
