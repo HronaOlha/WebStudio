@@ -1,16 +1,35 @@
 .hero {
+  width: 100%;
   background-color: var(--accent-bgc);
   padding: 200px 0px;
   text-align: center;
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/hero.jpg);
+  background-image: $hero-gradient, url(../images/hero-mob.jpg);
   background-color: #c4c4c4;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: $hero-gradient, url(../images/hero-mob_2x.jpg);
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    background-image: $hero-gradient, url(../images/hero-tab.jpg);
+
+    @extend %retina {
+      background-image: $hero-gradient, url(../images/hero-tab_2x.jpg);
+    }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    background-image: $hero-gradient, url(../images/hero.jpg);
+
+    @extend %retina {
+      background-image: $hero-gradient, url(../images/hero_2x.jpg);
+    }
+  }
 }
 
 .hero__title {

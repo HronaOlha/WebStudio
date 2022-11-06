@@ -17,9 +17,7 @@
   @media screen and (min-width: $tablet-width) {
     @include calc(2);
   }
-  @media screen and (min-width: $desktop-width) {
-    justify-content: space-between;
-  }
+
   @media screen and (min-width: $desktop-width) {
     flex-wrap: nowrap;
     align-items: baseline;
