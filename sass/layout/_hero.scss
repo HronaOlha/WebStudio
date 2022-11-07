@@ -9,16 +9,14 @@
   background-position: center;
   background-size: cover;
 
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
+  @include retina {
     background-image: $hero-gradient, url(../images/hero-mob_2x.jpg);
   }
 
   @media screen and (min-width: $tablet-width) {
     background-image: $hero-gradient, url(../images/hero-tab.jpg);
 
-    @extend %retina {
+    @include retina {
       background-image: $hero-gradient, url(../images/hero-tab_2x.jpg);
     }
   }
@@ -26,7 +24,7 @@
   @media screen and (min-width: $desktop-width) {
     background-image: $hero-gradient, url(../images/hero.jpg);
 
-    @extend %retina {
+    @include retina {
       background-image: $hero-gradient, url(../images/hero_2x.jpg);
     }
   }

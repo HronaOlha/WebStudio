@@ -6,3 +6,11 @@
   transition: $property1 $primary-transition-time $primary-cubic-function,
     $property2 $primary-transition-time $primary-cubic-function;
 }
+
+@mixin retina {
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    @content;
+  }
+}
