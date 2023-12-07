@@ -1,9 +1,5 @@
 # goit-markup-hw-08
 
-## Landing page template
-
-[Template](https://www.figma.com/file/1ehrLBauvVFu4mVhxsHzyZ/Web-Studio-(Version-2.1)?type=design&node-id=3-7653&mode=design&t=2AYcwcZFzYsHWezd-0)
-
 ## Task
 
 - All background and content bitmaps are responsive and support x1 and x2 screens.
